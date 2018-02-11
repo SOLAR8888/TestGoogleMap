@@ -6,4 +6,5 @@ test google map app
 <img width="200" src="https://github.com/SOLAR8888/TestGoogleMap/blob/master/screens/1.jpg"/>
 <img width="200" src="https://github.com/SOLAR8888/TestGoogleMap/blob/master/screens/2.jpg"/>
 <img width="200" src="https://github.com/SOLAR8888/TestGoogleMap/blob/master/screens/3.jpg"/>
+<img width="200" src="https://github.com/SOLAR8888/TestGoogleMap/blob/master/screens/4.jpg"/>
 <br>

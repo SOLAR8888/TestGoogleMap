@@ -331,8 +331,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 try {
                     if (isCancelled()) return null;
                     int duration = list[0].get(Math.round(i/1000));
-                    TimeUnit.MILLISECONDS.sleep(duration);
                     publishProgress(i);
+                    TimeUnit.MILLISECONDS.sleep(duration);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

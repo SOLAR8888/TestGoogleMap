@@ -1,0 +1,106 @@
+<android.support.v7.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.vereskun.maptest.views.MapsActivity" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:text="Start"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddWaypoint"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:text="Add Waypoint"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            map:layout_constraintBottom_toTopOf="@+id/btnStart"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:gravity="center"
+            android:text="Select From"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            map:layout_constraintBottom_toTopOf="@+id/btnAddWaypoint"
+            map:layout_constraintEnd_toStartOf="@+id/tvTo"
+            map:layout_constraintHorizontal_bias="0.5"
+            map:layout_constraintHorizontal_chainStyle="spread_inside"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="@+id/tvTo" />
+
+        <TextView
+            android:id="@+id/tvTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Select To"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            map:layout_constraintBottom_toTopOf="@+id/btnAddWaypoint"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.5"
+            map:layout_constraintStart_toEndOf="@+id/tvFrom" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:text="Clear"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            map:layout_constraintEnd_toStartOf="@+id/btnClear"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.ContentFrameLayout>

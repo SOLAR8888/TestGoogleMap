@@ -285,7 +285,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         btnClear.setEnabled(true);
         RealmList<RealmLatLng> realmMarkers = routesList.get(position).getMarkers();
         for (int i = 0; i < realmMarkers.size(); i++) {
-            RealmLatLng marker = realmMarkers.get(position);
+            RealmLatLng marker = realmMarkers.get(i);
             mMap.addMarker(new MarkerOptions().position(new LatLng(marker.getLatitude(),marker.getLongitude())));
         }
         tvFrom.setText(routesList.get(position).getFrom());
